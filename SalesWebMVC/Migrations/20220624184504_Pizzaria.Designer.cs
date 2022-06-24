@@ -8,8 +8,8 @@ using SalesWebMVC.Data;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20220624183606_Inicial")]
-    partial class Inicial
+    [Migration("20220624184504_Pizzaria")]
+    partial class Pizzaria
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SalesWebMVC.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Pizzaria : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
