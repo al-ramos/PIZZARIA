@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SalesWebMVC.Migrations
 {
-    public partial class Initial : Migration
+    public partial class teste1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

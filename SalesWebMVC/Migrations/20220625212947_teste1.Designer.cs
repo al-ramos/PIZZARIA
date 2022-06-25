@@ -8,8 +8,8 @@ using SalesWebMVC.Data;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20220625110932_Initial")]
-    partial class Initial
+    [Migration("20220625212947_teste1")]
+    partial class teste1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,7 +74,7 @@ namespace SalesWebMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SalesWebMVC.Models.Produtos", "Produto")
-                        .WithMany("ListarPedidos")
+                        .WithMany()
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

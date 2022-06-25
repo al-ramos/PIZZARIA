@@ -72,7 +72,7 @@ namespace SalesWebMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SalesWebMVC.Models.Produtos", "Produto")
-                        .WithMany("ListarPedidos")
+                        .WithMany()
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
