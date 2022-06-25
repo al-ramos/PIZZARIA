@@ -11,6 +11,19 @@ namespace SalesWebMVC.Models
 
         public string Descricao { get; set; }
 
+        public double Valor { get; set; }
 
+        public Produtos()
+        {
+
+        }
+
+        public Produtos(int id, string descricao, double valor)
+        {
+            Id = id;
+            Descricao = descricao;
+            Valor = valor;
+        }
     }
+
 }

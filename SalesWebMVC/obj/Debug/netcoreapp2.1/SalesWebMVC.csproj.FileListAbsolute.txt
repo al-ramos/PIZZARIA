@@ -193,3 +193,6 @@ C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Sale
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\SalesWebMVC.pdb
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\SalesWebMVC.genruntimeconfig.cache
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\SalesWebMVC.csproj.CopyComplete
+C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Produtos\Index.cshtml.g.cs
+C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Index.cshtml.g.cs
+C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Create.cshtml.g.cs
