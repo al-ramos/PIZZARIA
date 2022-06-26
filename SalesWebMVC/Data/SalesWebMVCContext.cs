@@ -14,7 +14,7 @@ namespace SalesWebMVC.Data
         {
         }
 
-        public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
     
        public DbSet<Produto> Produto { get; set; }
 

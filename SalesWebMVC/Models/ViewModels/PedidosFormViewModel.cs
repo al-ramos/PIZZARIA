@@ -11,7 +11,7 @@ namespace SalesWebMVC.Models.ViewModels
         public ICollection<Produto> Produtos { get; set; }
 
 
-       // public ICollection<Clientes> Clientes { get; set; }
+        public ICollection<Cliente> Clientes { get; set; }
 
 
     }

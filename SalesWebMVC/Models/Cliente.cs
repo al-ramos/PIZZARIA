@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SalesWebMVC.Models
 {
-    public class Clientes
+    public class Cliente
     {
 
         public int Id { get; set; }
@@ -16,12 +16,12 @@ namespace SalesWebMVC.Models
             
        public ICollection<Pedido>   ListarPedidos {get; set; } = new List<Pedido>();
             
-        public Clientes()
+        public Cliente()
         {
 
         }
 
-        public Clientes(int id, string name, string email)
+        public Cliente(int id, string name, string email)
         {
             Id = id;
             Name = name;

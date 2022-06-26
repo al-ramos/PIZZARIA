@@ -8,7 +8,6 @@
 <h2>@ViewData["Title"]</h2>
 
 
-
 <p>
     <a asp-action="Create" class="btn btn-default">Adicionar Pedido</a>
 </p>
@@ -17,9 +16,12 @@
     <thead>
         <tr class="success">
             <th>
-                @Html.DisplayNameFor(model => model.Produto)
+                @Html.DisplayNameFor(model => model.ProdutoId)
             </th>
-        <th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClienteId)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.status)
             </th>
         </tr>
@@ -30,7 +32,10 @@
     {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Produto)
+            @Html.DisplayFor(modelItem => item.ProdutoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClienteId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.status)

@@ -8,7 +8,7 @@ using SalesWebMVC.Data;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20220626153721_Initial")]
+    [Migration("20220626212949_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace SalesWebMVC.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("SalesWebMVC.Models.Clientes", b =>
+            modelBuilder.Entity("SalesWebMVC.Models.Cliente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -29,7 +29,7 @@ namespace SalesWebMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Cliente");
                 });
 
             modelBuilder.Entity("SalesWebMVC.Models.Pedido", b =>
@@ -68,7 +68,7 @@ namespace SalesWebMVC.Migrations
 
             modelBuilder.Entity("SalesWebMVC.Models.Pedido", b =>
                 {
-                    b.HasOne("SalesWebMVC.Models.Clientes", "Cliente")
+                    b.HasOne("SalesWebMVC.Models.Cliente", "Cliente")
                         .WithMany("ListarPedidos")
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade);

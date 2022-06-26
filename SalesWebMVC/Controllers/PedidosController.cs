@@ -15,11 +15,13 @@ namespace SalesWebMVC.Controllers
 
         private readonly PedidoService _pedidosService;
         private readonly ProdutoService _produtoService;
+        private readonly ClienteService _clientesService;
 
-        public PedidosController(PedidoService pedidosService , ProdutoService produtoServices)
+        public PedidosController(PedidoService pedidosService , ProdutoService produtoServices, ClienteService clienteService)
         {
             _pedidosService = pedidosService;
             _produtoService = produtoServices;
+            _clientesService = clienteService;
         }
 
         public IActionResult Index()
@@ -31,7 +33,8 @@ namespace SalesWebMVC.Controllers
       public IActionResult Create ()
         {
             var produtos = _produtoService.FindAll();
-            var viewModel = new PedidosFormViewModel { Produtos   = produtos  };
+            var clientes = _clientesService.FindAll();
+            var viewModel = new PedidosFormViewModel { Produtos   = produtos, Clientes = clientes  };
             return View(viewModel); 
         }
 
@@ -42,6 +45,39 @@ namespace SalesWebMVC.Controllers
             _pedidosService.Insert(pedidos);
             return Redirect(nameof(Index));
 ;        }
+
+        public IActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var obj = _pedidosService.FindById(id.Value);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)  
+            {
+                return NotFound();
+            }
+
+            var obj = _pedidosService.FindById(id.Value);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+
 
 
     }

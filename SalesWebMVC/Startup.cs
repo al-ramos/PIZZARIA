@@ -45,6 +45,7 @@ namespace SalesWebMVC
 
             services.AddScoped<PedidoService>();
             services.AddScoped<ProdutoService>();
+            services.AddScoped<ClienteService>();
 
         }
 

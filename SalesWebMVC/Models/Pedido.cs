@@ -13,7 +13,7 @@ namespace SalesWebMVC.Models
         public Produto Produto { get; set; }
         public int ProdutoId { get; set; }
 
-        public Clientes Cliente { get; set; }
+        public Cliente Cliente { get; set; }
         public int ClienteId { get; set; }
     
         public Status status { get; set; }
@@ -21,14 +21,16 @@ namespace SalesWebMVC.Models
         public Pedido()
         {
 
-        }
+         }
 
-        public Pedido(int id, Produto produto, Clientes cliente, Status status)
+        public Pedido(int id, Produto produto, Cliente cliente, Status status)
         {
             Id = id;
             Produto = produto;
             Cliente = cliente;
             this.status = status;
         }
+
+     
     }
 }

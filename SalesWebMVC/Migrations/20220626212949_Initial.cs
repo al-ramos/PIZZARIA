@@ -8,7 +8,7 @@ namespace SalesWebMVC.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Clientes",
+                name: "Cliente",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -18,7 +18,7 @@ namespace SalesWebMVC.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clientes", x => x.Id);
+                    table.PrimaryKey("PK_Cliente", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -49,9 +49,9 @@ namespace SalesWebMVC.Migrations
                 {
                     table.PrimaryKey("PK_Pedidos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Pedidos_Clientes_ClienteId",
+                        name: "FK_Pedidos_Cliente_ClienteId",
                         column: x => x.ClienteId,
-                        principalTable: "Clientes",
+                        principalTable: "Cliente",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -79,7 +79,7 @@ namespace SalesWebMVC.Migrations
                 name: "Pedidos");
 
             migrationBuilder.DropTable(
-                name: "Clientes");
+                name: "Cliente");
 
             migrationBuilder.DropTable(
                 name: "Produto");

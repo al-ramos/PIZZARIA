@@ -24,12 +24,24 @@ namespace SalesWebMVC.Services
 
         public void Insert(Pedido obj)
         {
-            obj.Cliente = _context.Clientes.First();
+            obj.Cliente = _context.Cliente.First();
             obj.Produto = _context.Produto.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
-    }
 
+        public Pedido FindById(int id)
+        {
+            return _context.Pedidos.FirstOrDefault(obj => obj.Id == id);
+        }
+
+        public void Remove(int id)
+        {
+            var obj = _context.Pedidos.Find(id);
+            _context.Pedidos.Remove(obj);
+            _context.SaveChanges();
+        }
+
+    }
 
 }

@@ -19,13 +19,13 @@ namespace SalesWebMVC.Controllers
             _context = context;
         }
 
-        // GET: Clientes
+        // GET: Cliente
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            return View(await _context.Cliente.ToListAsync());
         }
 
-        // GET: Clientes/Details/5
+        // GET: Cliente/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,7 +33,7 @@ namespace SalesWebMVC.Controllers
                 return NotFound();
             }
 
-            var clientes = await _context.Clientes
+            var clientes = await _context.Cliente
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (clientes == null)
             {
@@ -43,18 +43,18 @@ namespace SalesWebMVC.Controllers
             return View(clientes);
         }
 
-        // GET: Clientes/Create
+        // GET: Cliente/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Clientes/Create
+        // POST: Cliente/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email")] Clientes clientes)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email")] Cliente clientes)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace SalesWebMVC.Controllers
             return View(clientes);
         }
 
-        // GET: Clientes/Edit/5
+        // GET: Cliente/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace SalesWebMVC.Controllers
                 return NotFound();
             }
 
-            var clientes = await _context.Clientes.FindAsync(id);
+            var clientes = await _context.Cliente.FindAsync(id);
             if (clientes == null)
             {
                 return NotFound();
@@ -81,12 +81,12 @@ namespace SalesWebMVC.Controllers
             return View(clientes);
         }
 
-        // POST: Clientes/Edit/5
+        // POST: Cliente/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email")] Clientes clientes)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email")] Cliente clientes)
         {
             if (id != clientes.Id)
             {
@@ -116,7 +116,7 @@ namespace SalesWebMVC.Controllers
             return View(clientes);
         }
 
-        // GET: Clientes/Delete/5
+        // GET: Cliente/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,7 +124,7 @@ namespace SalesWebMVC.Controllers
                 return NotFound();
             }
 
-            var clientes = await _context.Clientes
+            var clientes = await _context.Cliente
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (clientes == null)
             {
@@ -134,20 +134,20 @@ namespace SalesWebMVC.Controllers
             return View(clientes);
         }
 
-        // POST: Clientes/Delete/5
+        // POST: Cliente/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var clientes = await _context.Clientes.FindAsync(id);
-            _context.Clientes.Remove(clientes);
+            var clientes = await _context.Cliente.FindAsync(id);
+            _context.Cliente.Remove(clientes);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ClientesExists(int id)
         {
-            return _context.Clientes.Any(e => e.Id == id);
+            return _context.Cliente.Any(e => e.Id == id);
         }
     }
 }

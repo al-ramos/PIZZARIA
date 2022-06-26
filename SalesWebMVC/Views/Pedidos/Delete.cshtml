@@ -1,0 +1,29 @@
+﻿@model SalesWebMVC.Models.Pedido
+
+@{ ViewData["Title"] = "Delete"; }
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Confirma a exclusão do registro?</h3>
+<hr />
+
+<div>
+    <h4>Pedidos</h4>
+    <hr />
+    <d1 class="d1-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutoId)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutoId)
+        </dt>
+    </d1>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
