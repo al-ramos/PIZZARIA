@@ -64,17 +64,28 @@ namespace SalesWebMVC.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id == null)  
+            if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Index));
             }
 
-            var obj = _pedidosService.FindById(id.Value);
+            var obj = _pedidosService.FindById(id.Value );
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Index));
             }
+
             return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+            _pedidosService.Remove(id);
+            return RedirectToAction(nameof(Index));
+
+
         }
 
 

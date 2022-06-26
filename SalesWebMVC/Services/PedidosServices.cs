@@ -35,7 +35,7 @@ namespace SalesWebMVC.Services
             return _context.Pedidos.FirstOrDefault(obj => obj.Id == id);
         }
 
-        public void Remove(int id)
+        public void Remove(int? id)
         {
             var obj = _context.Pedidos.Find(id);
             _context.Pedidos.Remove(obj);
