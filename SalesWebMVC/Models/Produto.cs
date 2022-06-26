@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SalesWebMVC.Models
 {
-    public class Produtos
+    public class Produto
     {
         public int Id { get; set; }
 
@@ -13,12 +13,12 @@ namespace SalesWebMVC.Models
 
         public double Valor { get; set; }
 
-        public Produtos()
+        public Produto()
         {
 
         }
 
-        public Produtos(int id, string descricao, double valor)
+        public Produto(int id, string descricao, double valor)
         {
             Id = id;
             Descricao = descricao;

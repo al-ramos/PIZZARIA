@@ -43,8 +43,8 @@ namespace SalesWebMVC
             
             services.AddScoped<SeeddingService>();
 
-            services.AddScoped<PedidosService>();
-            services.AddScoped<ProdutosService>();
+            services.AddScoped<PedidoService>();
+            services.AddScoped<ProdutoService>();
 
         }
 

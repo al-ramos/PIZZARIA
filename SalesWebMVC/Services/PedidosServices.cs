@@ -7,25 +7,25 @@ using SalesWebMVC.Models;
 
 namespace SalesWebMVC.Services
 {
-    public class PedidosService
+    public class PedidoService
     {
         private readonly SalesWebMvcContext _context;
 
-        public PedidosService(SalesWebMvcContext context)
+        public PedidoService(SalesWebMvcContext context)
         {
             _context = context;
 
         }
 
-        public List<Pedidos> FindAll()
+        public List<Pedido> FindAll()
         {
             return _context.Pedidos.ToList();
         }
 
-        public void Insert(Pedidos obj)
+        public void Insert(Pedido obj)
         {
             obj.Cliente = _context.Clientes.First();
-            obj.Produto = _context.Produtos.First();
+            obj.Produto = _context.Produto.First();
             _context.Add(obj);
             _context.SaveChanges();
         }

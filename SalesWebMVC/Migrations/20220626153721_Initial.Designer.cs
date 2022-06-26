@@ -8,8 +8,8 @@ using SalesWebMVC.Data;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20220625212947_teste1")]
-    partial class teste1
+    [Migration("20220626153721_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,7 +32,7 @@ namespace SalesWebMVC.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("SalesWebMVC.Models.Pedidos", b =>
+            modelBuilder.Entity("SalesWebMVC.Models.Pedido", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -52,7 +52,7 @@ namespace SalesWebMVC.Migrations
                     b.ToTable("Pedidos");
                 });
 
-            modelBuilder.Entity("SalesWebMVC.Models.Produtos", b =>
+            modelBuilder.Entity("SalesWebMVC.Models.Produto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -63,17 +63,17 @@ namespace SalesWebMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Produto");
                 });
 
-            modelBuilder.Entity("SalesWebMVC.Models.Pedidos", b =>
+            modelBuilder.Entity("SalesWebMVC.Models.Pedido", b =>
                 {
                     b.HasOne("SalesWebMVC.Models.Clientes", "Cliente")
                         .WithMany("ListarPedidos")
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SalesWebMVC.Models.Produtos", "Produto")
+                    b.HasOne("SalesWebMVC.Models.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade);

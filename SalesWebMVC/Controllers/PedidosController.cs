@@ -13,31 +13,33 @@ namespace SalesWebMVC.Controllers
     public class PedidosController : Controller
     {
 
-        private readonly PedidosService _produtosServices;
+        private readonly PedidoService _pedidosService;
+        private readonly ProdutoService _produtoService;
 
-        public PedidosController(PedidosService produtosServices)
+        public PedidosController(PedidoService pedidosService , ProdutoService produtoServices)
         {
-            _produtosServices = produtosServices;
+            _pedidosService = pedidosService;
+            _produtoService = produtoServices;
         }
 
         public IActionResult Index()
         {
-            var list = _produtosServices.FindAll();
+            var list = _pedidosService.FindAll();
             return View(list);
         }
 
       public IActionResult Create ()
         {
-            var produto= _produtosServices.FindAll();
-           // var viewModel = new PedidosFormViewModel {  Produto = (ICollection<Produtos>) produto };
-            return View(); 
+            var produtos = _produtoService.FindAll();
+            var viewModel = new PedidosFormViewModel { Produtos   = produtos  };
+            return View(viewModel); 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Pedidos pedidos)
+        public IActionResult Create(Pedido pedidos)
         {
-            _produtosServices.Insert(pedidos);
+            _pedidosService.Insert(pedidos);
             return Redirect(nameof(Index));
 ;        }
 

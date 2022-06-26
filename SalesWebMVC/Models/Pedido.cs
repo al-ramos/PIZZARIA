@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SalesWebMVC.Models
 {
-    public class Pedidos
+    public class Pedido
     {
         public int Id { get; set; }
        
-        public Produtos Produto { get; set; }
+        public Produto Produto { get; set; }
         public int ProdutoId { get; set; }
 
         public Clientes Cliente { get; set; }
@@ -18,12 +18,12 @@ namespace SalesWebMVC.Models
     
         public Status status { get; set; }
 
-        public Pedidos()
+        public Pedido()
         {
 
         }
 
-        public Pedidos(int id, Produtos produto, Clientes cliente, Status status)
+        public Pedido(int id, Produto produto, Clientes cliente, Status status)
         {
             Id = id;
             Produto = produto;

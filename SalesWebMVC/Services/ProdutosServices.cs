@@ -7,19 +7,19 @@ using SalesWebMVC.Models;
 
 namespace SalesWebMVC.Services
 {
-    public class ProdutosService
+    public class ProdutoService
     {
         private readonly SalesWebMvcContext _context;
 
-        public ProdutosService(SalesWebMvcContext context)
+        public ProdutoService(SalesWebMvcContext context)
         {
             _context = context;
 
         }
 
-        public List<Produtos> FindAll()
+        public List<Produto> FindAll()
         {
-            return _context.Produtos.OrderBy(x => x.Descricao).ToList();
+            return _context.Produto.OrderBy(x => x.Descricao).ToList();
         }
     }
 

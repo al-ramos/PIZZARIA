@@ -14,7 +14,7 @@ namespace SalesWebMVC.Models
 
         public string Email { get; set; }
             
-       public ICollection<Pedidos>   ListarPedidos {get; set; } = new List<Pedidos>();
+       public ICollection<Pedido>   ListarPedidos {get; set; } = new List<Pedido>();
             
         public Clientes()
         {
@@ -29,12 +29,12 @@ namespace SalesWebMVC.Models
         }
 
        
-        public void   AddPedidos(Pedidos ped)
+        public void   AddPedidos(Pedido ped)
         {
             ListarPedidos.Add(ped);
         }
 
-        public void RemovePedidos(Pedidos ped)
+        public void RemovePedidos(Pedido ped)
         {
             ListarPedidos.Remove(ped);
         }

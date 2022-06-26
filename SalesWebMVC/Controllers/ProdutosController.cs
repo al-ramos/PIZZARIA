@@ -10,16 +10,16 @@ namespace SalesWebMVC.Controllers
     public class ProdutosController : Controller
     {
 
-        private readonly ProdutosService _produtosServices;
+        private readonly ProdutoService _produtoServices;
 
-        public ProdutosController(ProdutosService produtosServices)
+        public ProdutosController(ProdutoService produtosServices)
         {
-            _produtosServices = produtosServices;
+            _produtoServices = produtosServices;
         }
 
         public IActionResult Index()
         {
-            var list = _produtosServices.FindAll();
+            var list = _produtoServices.FindAll();
             return View(list);
         }
 

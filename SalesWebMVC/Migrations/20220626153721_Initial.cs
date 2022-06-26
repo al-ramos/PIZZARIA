@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SalesWebMVC.Migrations
 {
-    public partial class teste1 : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,7 +22,7 @@ namespace SalesWebMVC.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Produtos",
+                name: "Produto",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -32,7 +32,7 @@ namespace SalesWebMVC.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produtos", x => x.Id);
+                    table.PrimaryKey("PK_Produto", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,9 +55,9 @@ namespace SalesWebMVC.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Pedidos_Produtos_ProdutoId",
+                        name: "FK_Pedidos_Produto_ProdutoId",
                         column: x => x.ProdutoId,
-                        principalTable: "Produtos",
+                        principalTable: "Produto",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -82,7 +82,7 @@ namespace SalesWebMVC.Migrations
                 name: "Clientes");
 
             migrationBuilder.DropTable(
-                name: "Produtos");
+                name: "Produto");
         }
     }
 }
