@@ -8,7 +8,7 @@ using SalesWebMVC.Data;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20220626212949_Initial")]
+    [Migration("20220627112642_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,7 @@ namespace SalesWebMVC.Migrations
 
                     b.Property<int>("ProdutoId");
 
-                    b.Property<int>("status");
+                    b.Property<string>("Status");
 
                     b.HasKey("Id");
 

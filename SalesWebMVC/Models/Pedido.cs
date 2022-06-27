@@ -16,19 +16,19 @@ namespace SalesWebMVC.Models
         public Cliente Cliente { get; set; }
         public int ClienteId { get; set; }
     
-        public Status status { get; set; }
+        public string Status { get; set; }
 
         public Pedido()
         {
 
          }
 
-        public Pedido(int id, Produto produto, Cliente cliente, Status status)
+        public Pedido(int id, Produto produto, Cliente cliente, string sta)
         {
             Id = id;
             Produto = produto;
             Cliente = cliente;
-            this.status = status;
+            Status = sta;
         }
 
      

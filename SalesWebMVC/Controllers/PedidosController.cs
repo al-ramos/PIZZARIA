@@ -60,6 +60,7 @@ namespace SalesWebMVC.Controllers
             }
 
             return View(obj);
+
         }
 
         public IActionResult Delete(int? id)
@@ -73,6 +74,7 @@ namespace SalesWebMVC.Controllers
             if (obj == null)
             {
                 return RedirectToAction(nameof(Index));
+
             }
 
             return View(obj);
@@ -89,7 +91,7 @@ namespace SalesWebMVC.Controllers
         }
 
 
-
+      
 
     }
 }

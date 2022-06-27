@@ -197,3 +197,4 @@ C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razo
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Index.cshtml.g.cs
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Create.cshtml.g.cs
 C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Delete.cshtml.g.cs
+C:\Users\al-ra\OneDrive\ESTUDO\PIZZARIA\SalesWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Pedidos\Details.cshtml.g.cs
