@@ -17,12 +17,12 @@ namespace SalesWebMVC.Data
 
         public void Seed()
         {
-            if (_context.Cliente.Any() ||
-                _context.Produto.Any() ||
-                _context.Pedidos.Any()) ;
-            {
-                return;
-            }
+            //if (_context.Cliente.Any() ||
+            //    _context.Produto.Any() ||
+            //    _context.Pedidos.Any()) ;
+            //{
+            //    return;
+            //}
 
             Cliente c1 = new Cliente(1, "Ana", "ana@exempo.com");
             Cliente c2 = new Cliente(2, "Thais", "thais@exemplo.com");
