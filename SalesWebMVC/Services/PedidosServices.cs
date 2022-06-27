@@ -24,9 +24,7 @@ namespace SalesWebMVC.Services
         }
 
         public void Insert(Pedido obj)
-        {
-           // obj.Cliente = _context.Cliente.First();
-         //   obj.Produto = _context.Produto.First();
+        {           
             _context.Add(obj);
             _context.SaveChanges();
         }
